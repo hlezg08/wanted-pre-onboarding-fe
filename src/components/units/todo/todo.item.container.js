@@ -40,7 +40,28 @@ export default function TodoItem(props) {
       },
       data: {
         todo: newContents || props.el.todo,
-        isCompleted: false,
+        isCompleted: props.el.isCompleted,
+      },
+    })
+      .then((response) => {
+        window.location.reload("/todo");
+      })
+      .catch((error) => {
+        alert(error.response.data.message);
+      });
+  };
+
+  const onCheckCompleted = async (checked, id) => {
+    await axios({
+      method: "put",
+      url: `https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/todos/${id}`,
+      headers: {
+        Authorization: `Bearer ${props.accessToken}`,
+        "Content-Type": "application/json",
+      },
+      data: {
+        todo: props.el.todo,
+        isCompleted: checked,
       },
     })
       .then((response) => {
@@ -55,6 +76,11 @@ export default function TodoItem(props) {
     <S.ListItemWrapper>
       {!isEdit && (
         <>
+          <S.ListCompleted
+            type="checkbox"
+            onChange={(e) => onCheckCompleted(e.target.checked, props.el.id)}
+            checked={props.el.isCompleted}
+          />
           <S.ListItem isCompleted={props.el.isCompleted}>
             {props.el.todo}
           </S.ListItem>

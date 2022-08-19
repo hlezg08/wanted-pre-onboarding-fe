@@ -45,6 +45,10 @@ export const ListItemWrapper = styled.div`
   margin: 10px 0;
   flex-grow: 1;
 `;
+export const ListCompleted = styled.input`
+  width: 20px;
+  height: 20px;
+`;
 export const ListItem = styled.li`
   width: 100%;
   font-size: 1rem;
