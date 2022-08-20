@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# 원티드 프리온보딩 프론트엔드 - 선발 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://github.com/walking-sunset/selection-task
 
-## Available Scripts
+## 사용 기술 스택 및 라이브러리
 
-In the project directory, you can run:
+- Framework : React.js
+- CSS-IN-JS : emotion
+- REST API 요청 및 응답 : axios
+- 아이콘 : react-icons
+- 라우팅 및 리다이렉트 : react-router-dom
 
-### `npm start`
+## 프로젝트 실행
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+프로젝트 파일 클론
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone https://github.com/hlezg08/wanted-pre-onboarding-fe.git
+```
 
-### `npm test`
+프로젝트 실행에 필요한 라이브러리(node_modules) 설치
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+yarn install
+```
 
-### `npm run build`
+프로젝트 실행
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`localhost:3000` 경로로 실행됩니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 프로젝트 데모
 
-### `npm run eject`
+### 회원가입 및 로그인
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 회원가입
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![signup-hyelin-150](https://user-images.githubusercontent.com/59791809/185732997-ada458c6-082a-4e2f-9abb-708f400431c5.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 로그인
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![login-hyelin-150](https://user-images.githubusercontent.com/59791809/185732982-cdf77314-7e5c-4fd2-8b6d-75339c677777.gif)
 
-## Learn More
+#### 리다이렉트
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. 토큰이 있을 때 `/`경로 접속시 `/todo`로 리다이렉트
+   ![redirect-token](https://user-images.githubusercontent.com/59791809/185733029-80c5f84f-7e65-41cf-9c8b-aba23bc2b43e.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. 토큰이 없을 때 `/todo` 접속시 `/`로 리다이렉트
+   ![redirect-no token](https://user-images.githubusercontent.com/59791809/185733025-70545dec-87d4-458f-9195-a715bea7f22d.gif)
 
-### Code Splitting
+### 투두리스트
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 투두리스트 등록
 
-### Analyzing the Bundle Size
+![createTodo](https://user-images.githubusercontent.com/59791809/185733051-24090fb5-bd82-47fd-ae3b-7d5531a60e87.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 투두리스트 수정
 
-### Making a Progressive Web App
+- 내용 수정
+  ![updateTodo-contents](https://user-images.githubusercontent.com/59791809/185733058-510f4b9d-e132-402f-86d7-dc3d4200c60e.gif)
+- 완료 표시
+  ![updateTodo-complete](https://user-images.githubusercontent.com/59791809/185733057-cd396bad-5577-4a86-a468-0190bfdb3dbd.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 투두리스트 삭제
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![deleteTodo](https://user-images.githubusercontent.com/59791809/185733056-1e32cfa3-b249-484e-b1bf-14ee4074bac4.gif)
