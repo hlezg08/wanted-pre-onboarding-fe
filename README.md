@@ -17,6 +17,9 @@ https://github.com/walking-sunset/selection-task
 ```
 git clone https://github.com/hlezg08/wanted-pre-onboarding-fe.git
 ```
+```
+cd wanted-pre-onboarding-fe
+```
 
 프로젝트 실행에 필요한 라이브러리(node_modules) 설치
 
